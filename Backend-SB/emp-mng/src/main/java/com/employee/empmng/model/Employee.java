@@ -1,7 +1,12 @@
 package com.employee.empmng.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Employee {
 
+	@Id
 	private long empId;
 	private String firstName;
 	private String lastName;
@@ -9,7 +14,6 @@ public class Employee {
 
 	public Employee() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Employee(long empId, String firstName, String lastName, String emailId) {
